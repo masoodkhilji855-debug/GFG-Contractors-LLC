@@ -25,13 +25,13 @@ export const ReviewsSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-12">
           
           <div className="text-left max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
               <Star className="w-3.5 h-3.5 fill-amber-400" />
               Verified Customer Satisfaction
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
               Trusted by Homeowners Across{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-cyan-300">
+              <span className="text-cyan-400">
                 Montgomery & Beyond
               </span>
             </h2>
@@ -41,7 +41,7 @@ export const ReviewsSection: React.FC = () => {
           </div>
 
           {/* Aggregate Rating Badge Card */}
-          <div className="shrink-0 p-5 rounded-2xl glass border-amber-500/30 glow-amber flex items-center gap-5">
+          <div className="shrink-0 p-5 rounded-2xl glass-card glow-amber flex items-center gap-5">
             <div className="text-center">
               <div className="text-4xl font-black text-amber-400">4.8</div>
               <div className="flex text-amber-400 text-sm justify-center my-0.5">

@@ -53,13 +53,13 @@ export const ContactLocationSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
             <MapPin className="w-3.5 h-3.5" />
             Central Alabama Hub & Service Radius
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Visit Our Montgomery HQ or{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+            <span className="text-cyan-400">
               Request On-Site Dispatch
             </span>
           </h2>
@@ -78,8 +78,8 @@ export const ContactLocationSection: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               {/* Phone Card */}
-              <div className="p-5 rounded-2xl glass border-cyan-500/30 glow-cyan">
-                <div className="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3">
+              <div className="p-5 rounded-2xl glass-card border-cyan-500/30 glow-cyan">
+                <div className="w-9 h-9 rounded-xl glass text-cyan-400 flex items-center justify-center mb-3">
                   <Phone className="w-5 h-5 fill-cyan-400" />
                 </div>
                 <div className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">24/7 Dispatch Hotline</div>
@@ -93,8 +93,8 @@ export const ContactLocationSection: React.FC = () => {
               </div>
 
               {/* Email Card */}
-              <div className="p-5 rounded-2xl glass border-cyan-500/30">
-                <div className="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3">
+              <div className="p-5 rounded-2xl glass-card">
+                <div className="w-9 h-9 rounded-xl glass text-cyan-400 flex items-center justify-center mb-3">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Contracting Inquiries</div>
@@ -110,10 +110,10 @@ export const ContactLocationSection: React.FC = () => {
             </div>
 
             {/* Address & Headquarters Card */}
-            <div className="p-5 rounded-2xl glass space-y-3">
+            <div className="p-5 rounded-2xl glass-card space-y-3">
               <div className="flex items-start justify-between">
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center shrink-0 border border-cyan-500/30">
+                  <div className="w-9 h-9 rounded-xl glass text-cyan-400 flex items-center justify-center shrink-0 border border-cyan-500/30">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -133,7 +133,7 @@ export const ContactLocationSection: React.FC = () => {
                   href="https://maps.google.com/?q=3045+Mobile+Hwy,+Montgomery,+AL+36108"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="shrink-0 p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-semibold flex items-center gap-1 border border-white/10 transition-colors"
+                  className="shrink-0 p-2 rounded-xl glass hover:bg-white/10 text-cyan-300 text-xs font-semibold flex items-center gap-1 border border-white/10 transition-colors"
                 >
                   <Navigation className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">Directions</span>
@@ -149,7 +149,7 @@ export const ContactLocationSection: React.FC = () => {
                   {serviceAreas.map((area, i) => (
                     <span
                       key={i}
-                      className="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-slate-950/70 border border-white/10 text-slate-300"
+                      className="px-2.5 py-0.5 rounded-md text-[11px] font-medium glass border border-white/10 text-slate-300"
                     >
                       {area}
                     </span>
@@ -170,7 +170,7 @@ export const ContactLocationSection: React.FC = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-              <div className="absolute bottom-2.5 left-2.5 px-3 py-1.5 rounded-lg bg-slate-950/90 backdrop-blur-md border border-cyan-500/30 text-[11px] font-semibold text-cyan-300 flex items-center gap-1.5 shadow-lg pointer-events-none">
+              <div className="absolute bottom-2.5 left-2.5 px-3 py-1.5 rounded-lg glass text-[11px] font-semibold text-cyan-300 flex items-center gap-1.5 shadow-lg pointer-events-none">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
                 <span>Active Service Base: 3045 Mobile Hwy</span>
               </div>
@@ -196,7 +196,7 @@ export const ContactLocationSection: React.FC = () => {
 
               {submitted ? (
                 <div className="py-12 text-center space-y-4 animate-in fade-in zoom-in-95 duration-300">
-                  <div className="w-16 h-16 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 flex items-center justify-center mx-auto shadow-lg shadow-cyan-500/20">
+                  <div className="w-16 h-16 rounded-full glass border border-cyan-400/40 text-cyan-300 flex items-center justify-center mx-auto shadow-lg">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <h4 className="text-lg font-bold text-white">
@@ -217,7 +217,7 @@ export const ContactLocationSection: React.FC = () => {
                           message: ''
                         });
                       }}
-                      className="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 transition-colors"
+                      className="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-200 glass hover:bg-white/10 transition-colors"
                     >
                       Send Another Message
                     </button>
@@ -237,7 +237,7 @@ export const ContactLocationSection: React.FC = () => {
                         placeholder="e.g. Marcus Thornton"
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none transition-colors"
+                        className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none transition-colors"
                       />
                     </div>
 
@@ -251,7 +251,7 @@ export const ContactLocationSection: React.FC = () => {
                         placeholder="(334) 315-9926"
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none transition-colors"
+                        className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none transition-colors"
                       />
                     </div>
                   </div>
@@ -266,7 +266,7 @@ export const ContactLocationSection: React.FC = () => {
                         placeholder="name@gmail.com"
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none transition-colors"
+                        className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none transition-colors"
                       />
                     </div>
 
@@ -277,15 +277,15 @@ export const ContactLocationSection: React.FC = () => {
                       <select
                         value={form.serviceType}
                         onChange={(e) => setForm({ ...form, serviceType: e.target.value })}
-                        className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none"
+                        className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white focus:border-cyan-400 outline-none"
                       >
-                        <option value="Emergency Plumbing Repair">Emergency Plumbing Repair (24/7)</option>
-                        <option value="Drain Cleaning / Hydrojetting">Drain Cleaning / Hydrojetting</option>
-                        <option value="Water Heater Service">Water Heater Repair / Replace</option>
-                        <option value="Sewer Line Inspection">Sewer Line Inspection / Scope</option>
-                        <option value="Commercial Contracting">Commercial Plumbing Contracting</option>
-                        <option value="Bathroom Remodeling">Bathroom / Kitchen Remodeling</option>
-                        <option value="Other Plumbing Question">Other General Question</option>
+                        <option value="Emergency Plumbing Repair" className="bg-slate-900 text-white">Emergency Plumbing Repair (24/7)</option>
+                        <option value="Drain Cleaning / Hydrojetting" className="bg-slate-900 text-white">Drain Cleaning / Hydrojetting</option>
+                        <option value="Water Heater Service" className="bg-slate-900 text-white">Water Heater Repair / Replace</option>
+                        <option value="Sewer Line Inspection" className="bg-slate-900 text-white">Sewer Line Inspection / Scope</option>
+                        <option value="Commercial Contracting" className="bg-slate-900 text-white">Commercial Plumbing Contracting</option>
+                        <option value="Bathroom Remodeling" className="bg-slate-900 text-white">Bathroom / Kitchen Remodeling</option>
+                        <option value="Other Plumbing Question" className="bg-slate-900 text-white">Other General Question</option>
                       </select>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ export const ContactLocationSection: React.FC = () => {
                       placeholder="Please include details like room location, symptoms (gurgling, low pressure, flooding), or approximate age of the home..."
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none transition-colors resize-none"
+                      className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none transition-colors resize-none"
                     />
                   </div>
 

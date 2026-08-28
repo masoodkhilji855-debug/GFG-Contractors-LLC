@@ -44,7 +44,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-xl rounded-3xl glass-header glow-cyan p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-xl rounded-3xl glass glow-cyan p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto"
         role="dialog"
         aria-modal="true"
         id="consultation-modal-dialog"
@@ -52,7 +52,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+          className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-white glass transition-colors cursor-pointer"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -60,7 +60,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
         {submitted ? (
           <div className="py-8 text-center space-y-4 animate-in zoom-in-95 duration-300">
-            <div className="w-16 h-16 rounded-full bg-cyan-500/20 border border-cyan-400 text-cyan-300 flex items-center justify-center mx-auto shadow-lg shadow-cyan-500/25">
+            <div className="w-16 h-16 rounded-full glass border border-cyan-400 text-cyan-300 flex items-center justify-center mx-auto shadow-lg shadow-cyan-500/25">
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-bold text-white">
@@ -116,7 +116,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                     placeholder="Full name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none"
+                    className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none"
                   />
                 </div>
 
@@ -130,7 +130,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                     placeholder="(334) 315-9926"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none"
+                    className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none"
                   />
                 </div>
               </div>
@@ -143,16 +143,16 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   <select
                     value={formData.projectType}
                     onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                    className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none"
+                    className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white focus:border-cyan-400 outline-none"
                   >
-                    <option value="Emergency Leak / Burst Pipe">Emergency Leak / Burst Pipe</option>
-                    <option value="Water Heater Replacement / Upgrade">Water Heater Replacement / Upgrade</option>
-                    <option value="Drain Cleaning / Hydrojetting">Drain Cleaning / Hydrojetting</option>
-                    <option value="Sewer Line Video Inspection">Sewer Line Video Inspection</option>
-                    <option value="Whole Home Repipe (PEX/Copper)">Whole Home Repipe (PEX/Copper)</option>
-                    <option value="Bathroom / Kitchen Remodel">Bathroom / Kitchen Remodel</option>
-                    <option value="Commercial Plumbing & Buildout">Commercial Plumbing & Buildout</option>
-                    <option value="General Inspection">General Inspection</option>
+                    <option value="Emergency Leak / Burst Pipe" className="bg-slate-900 text-white">Emergency Leak / Burst Pipe</option>
+                    <option value="Water Heater Replacement / Upgrade" className="bg-slate-900 text-white">Water Heater Replacement / Upgrade</option>
+                    <option value="Drain Cleaning / Hydrojetting" className="bg-slate-900 text-white">Drain Cleaning / Hydrojetting</option>
+                    <option value="Sewer Line Video Inspection" className="bg-slate-900 text-white">Sewer Line Video Inspection</option>
+                    <option value="Whole Home Repipe (PEX/Copper)" className="bg-slate-900 text-white">Whole Home Repipe (PEX/Copper)</option>
+                    <option value="Bathroom / Kitchen Remodel" className="bg-slate-900 text-white">Bathroom / Kitchen Remodel</option>
+                    <option value="Commercial Plumbing & Buildout" className="bg-slate-900 text-white">Commercial Plumbing & Buildout</option>
+                    <option value="General Inspection" className="bg-slate-900 text-white">General Inspection</option>
                   </select>
                 </div>
 
@@ -163,12 +163,12 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   <select
                     value={formData.preferredTime}
                     onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                    className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none"
+                    className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white focus:border-cyan-400 outline-none"
                   >
-                    <option value="Immediate Emergency (Today)">Immediate Emergency (Today)</option>
-                    <option value="Morning (8am - 12pm)">Morning (8am - 12pm)</option>
-                    <option value="Afternoon (12pm - 4pm)">Afternoon (12pm - 4pm)</option>
-                    <option value="Evening (4pm - 7pm)">Evening (4pm - 7pm)</option>
+                    <option value="Immediate Emergency (Today)" className="bg-slate-900 text-white">Immediate Emergency (Today)</option>
+                    <option value="Morning (8am - 12pm)" className="bg-slate-900 text-white">Morning (8am - 12pm)</option>
+                    <option value="Afternoon (12pm - 4pm)" className="bg-slate-900 text-white">Afternoon (12pm - 4pm)</option>
+                    <option value="Evening (4pm - 7pm)" className="bg-slate-900 text-white">Evening (4pm - 7pm)</option>
                   </select>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   placeholder="e.g. West Montgomery, Cloverdale, Prattville, etc."
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none"
+                  className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none"
                 />
               </div>
 
@@ -195,7 +195,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   placeholder="Tell us what is happening or what you want to upgrade..."
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none resize-none"
+                  className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none resize-none"
                 />
               </div>
 

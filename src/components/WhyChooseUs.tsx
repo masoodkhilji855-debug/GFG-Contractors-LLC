@@ -55,18 +55,18 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenConsultation }) 
   ];
 
   return (
-    <section className="py-16 sm:py-20 relative z-10 bg-slate-950/40 border-y border-white/5" id="why-us">
+    <section className="py-16 sm:py-20 relative z-10" id="why-us">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
             <Award className="w-3.5 h-3.5" />
             The G F G Contractor Standard
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Why Montgomery Homeowners & Businesses{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+            <span className="text-cyan-400">
               Count on G F G
             </span>
           </h2>
@@ -82,11 +82,11 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenConsultation }) 
             return (
               <div
                 key={i}
-                className="relative rounded-3xl p-6 sm:p-7 glass-card hover:border-cyan-500/30 shadow-xl shadow-slate-950/50 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
+                className="relative rounded-3xl p-6 sm:p-7 glass-card shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-11 h-11 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                    <div className="w-11 h-11 rounded-2xl glass flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
                       <Icon className="w-5 h-5" />
                     </div>
                     <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full glass text-cyan-300 border border-white/10">

@@ -128,7 +128,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="lg:col-span-7 space-y-6 text-left">
             
             {/* Trust Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass mb-2">
               <span className="text-cyan-400 text-xs font-bold">⭐ 4.8 Rating</span>
               <span className="w-1 h-1 rounded-full bg-slate-500"></span>
               <span className="text-slate-300 text-xs font-medium">9+ Verified Montgomery Reviews</span>
@@ -303,8 +303,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                               onClick={() => setFormData({ ...formData, serviceType: opt.label })}
                               className={`p-3 rounded-xl border text-left flex flex-col justify-between transition-all duration-200 cursor-pointer ${
                                 isSelected
-                                  ? 'bg-cyan-950/60 border-cyan-400 text-white shadow-md shadow-cyan-900/40 ring-1 ring-cyan-400'
-                                  : 'bg-slate-950/50 border-white/10 text-slate-300 hover:border-slate-600 hover:bg-slate-800/40'
+                                  ? 'bg-cyan-500/15 border-cyan-400 text-white shadow-md ring-1 ring-cyan-400'
+                                  : 'bg-white/[0.04] border-white/10 text-slate-300 hover:border-white/25 hover:bg-white/[0.07]'
                               }`}
                             >
                               <div className="flex items-center justify-between w-full">
@@ -341,13 +341,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                               onClick={() => setFormData({ ...formData, urgency: opt.level })}
                               className={`w-full p-3.5 rounded-xl border text-left transition-all duration-200 cursor-pointer ${
                                 isSelected
-                                  ? 'bg-cyan-950/60 border-cyan-400 text-white shadow-md shadow-cyan-900/40 ring-1 ring-cyan-400'
-                                  : 'bg-slate-950/50 border-white/10 text-slate-300 hover:border-slate-600 hover:bg-slate-800/40'
+                                  ? 'bg-cyan-500/15 border-cyan-400 text-white shadow-md ring-1 ring-cyan-400'
+                                  : 'bg-white/[0.04] border-white/10 text-slate-300 hover:border-white/25 hover:bg-white/[0.07]'
                               }`}
                             >
                               <div className="flex items-center justify-between">
                                 <span className="text-xs font-bold text-slate-100">{opt.badge}</span>
-                                <span className="text-[11px] font-semibold text-cyan-400 bg-cyan-950/70 px-2 py-0.5 rounded border border-cyan-500/20">
+                                <span className="text-[11px] font-semibold text-cyan-400 glass px-2 py-0.5 rounded border border-cyan-500/30">
                                   ETA: {opt.eta}
                                 </span>
                               </div>
@@ -358,7 +358,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       </div>
 
                       <div className="pt-2">
-                        <label className="block text-[10px] uppercase font-bold text-slate-500 tracking-widest mb-1.5">
+                        <label className="block text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1.5">
                           Property Classification:
                         </label>
                         <div className="grid grid-cols-3 gap-2 text-xs">
@@ -370,7 +370,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                               className={`py-2 px-1 rounded-lg border text-center font-medium transition-all ${
                                 formData.propertyType === type
                                   ? 'bg-cyan-500/20 border-cyan-400 text-cyan-200'
-                                  : 'bg-slate-950/40 border-white/10 text-slate-400 hover:text-slate-200'
+                                  : 'bg-white/[0.04] border-white/10 text-slate-400 hover:text-slate-200 hover:bg-white/[0.08]'
                               }`}
                             >
                               {type}
@@ -394,7 +394,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           placeholder="e.g. 1245 Mobile Hwy or Cloverdale Rd"
                           value={formData.address}
                           onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                          className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none transition-colors"
+                          className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none transition-colors"
                         />
                       </div>
 
@@ -406,17 +406,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           <select
                             value={formData.zipCode}
                             onChange={(e) => setFormData({ ...formData, zipCode: e.target.value })}
-                            className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white focus:border-cyan-500 outline-none"
+                            className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white focus:border-cyan-400 outline-none"
                           >
-                            <option value="36108">36108 (West Montgomery / HQ)</option>
-                            <option value="36104">36104 (Downtown / Capitol)</option>
-                            <option value="36106">36106 (Cloverdale / Midtown)</option>
-                            <option value="36109">36109 (Dalraida)</option>
-                            <option value="36111">36111 (Country Club / East)</option>
-                            <option value="36117">36117 (Eastchase / Outer)</option>
-                            <option value="36066">36066 (Prattville)</option>
-                            <option value="36054">36054 (Millbrook)</option>
-                            <option value="Other">Other Montgomery County Area</option>
+                            <option value="36108" className="bg-slate-900 text-white">36108 (West Montgomery / HQ)</option>
+                            <option value="36104" className="bg-slate-900 text-white">36104 (Downtown / Capitol)</option>
+                            <option value="36106" className="bg-slate-900 text-white">36106 (Cloverdale / Midtown)</option>
+                            <option value="36109" className="bg-slate-900 text-white">36109 (Dalraida)</option>
+                            <option value="36111" className="bg-slate-900 text-white">36111 (Country Club / East)</option>
+                            <option value="36117" className="bg-slate-900 text-white">36117 (Eastchase / Outer)</option>
+                            <option value="36066" className="bg-slate-900 text-white">36066 (Prattville)</option>
+                            <option value="36054" className="bg-slate-900 text-white">36054 (Millbrook)</option>
+                            <option value="Other" className="bg-slate-900 text-white">Other Montgomery County Area</option>
                           </select>
                         </div>
 
@@ -429,12 +429,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                             placeholder="Optional landmark"
                             value={formData.notes}
                             onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                            className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none"
+                            className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none"
                           />
                         </div>
                       </div>
 
-                      <div className="p-2.5 rounded-lg bg-cyan-950/40 border border-cyan-500/20 text-[11px] text-cyan-300 flex items-center gap-2">
+                      <div className="p-2.5 rounded-lg glass text-[11px] text-cyan-300 flex items-center gap-2">
                         <MapPin className="w-3.5 h-3.5 shrink-0" />
                         <span>Our fleet dispatches directly from 3045 Mobile Hwy for minimal drive-times.</span>
                       </div>
@@ -454,7 +454,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           placeholder="Your Name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none"
+                          className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none"
                         />
                       </div>
 
@@ -468,7 +468,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           placeholder="(334) 000-0000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none"
+                          className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none"
                         />
                       </div>
 
@@ -481,11 +481,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           placeholder="name@gmail.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-slate-950/50 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none"
+                          className="w-full bg-white/[0.05] border border-white/12 rounded-lg p-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 outline-none"
                         />
                       </div>
 
-                      <div className="p-3 rounded-xl bg-slate-950/80 border border-white/10 text-xs space-y-1">
+                      <div className="p-3 rounded-xl glass text-xs space-y-1">
                         <div className="flex justify-between text-slate-400">
                           <span>Requested Service:</span>
                           <span className="text-cyan-300 font-semibold">{formData.serviceType}</span>

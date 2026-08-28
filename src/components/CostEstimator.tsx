@@ -110,13 +110,13 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({ onBookWithEstimate
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/70 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
             <Calculator className="w-3.5 h-3.5" />
             Transparent Pricing Tool
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Instant Repair{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+            <span className="text-cyan-400">
               Cost & ETA Estimator
             </span>
           </h2>
@@ -144,8 +144,8 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({ onBookWithEstimate
                     onClick={() => setSelectedIssue(item.id)}
                     className={`w-full p-3.5 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex items-center justify-between ${
                       selectedIssue === item.id
-                        ? 'bg-cyan-950/60 border-cyan-400 text-white shadow-lg shadow-cyan-950/50 ring-1 ring-cyan-400/50'
-                        : 'bg-slate-950/40 border-white/10 text-slate-300 hover:border-slate-600 hover:bg-slate-800/40'
+                        ? 'bg-cyan-500/15 border-cyan-400 text-white shadow-lg ring-1 ring-cyan-400/50'
+                        : 'bg-white/[0.04] border-white/10 text-slate-300 hover:border-white/25 hover:bg-white/[0.07]'
                     }`}
                   >
                     <div>
@@ -183,8 +183,8 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({ onBookWithEstimate
                     onClick={() => setPropertyType(prop.id)}
                     className={`py-3 px-2 rounded-xl border text-center text-xs font-semibold transition-all cursor-pointer ${
                       propertyType === prop.id
-                        ? 'bg-cyan-950/60 border-cyan-400 text-cyan-200 shadow-md ring-1 ring-cyan-400/40'
-                        : 'bg-slate-950/40 border-white/10 text-slate-400 hover:text-slate-200 hover:border-slate-700'
+                        ? 'bg-cyan-500/20 border-cyan-400 text-cyan-200 shadow-md ring-1 ring-cyan-400/40'
+                        : 'bg-white/[0.04] border-white/10 text-slate-400 hover:text-slate-200 hover:bg-white/[0.08]'
                     }`}
                   >
                     {prop.label}
@@ -210,8 +210,8 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({ onBookWithEstimate
                     onClick={() => setUrgency(urg.id)}
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       urgency === urg.id
-                        ? 'bg-cyan-950/60 border-cyan-400 text-white shadow-md ring-1 ring-cyan-400/40'
-                        : 'bg-slate-950/40 border-white/10 text-slate-400 hover:text-slate-200 hover:border-slate-700'
+                        ? 'bg-cyan-500/20 border-cyan-400 text-white shadow-md ring-1 ring-cyan-400/40'
+                        : 'bg-white/[0.04] border-white/10 text-slate-400 hover:text-slate-200 hover:bg-white/[0.08]'
                     }`}
                   >
                     <div className="text-xs font-bold text-slate-100">{urg.label}</div>
@@ -232,7 +232,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({ onBookWithEstimate
                   <Sparkles className="w-3.5 h-3.5 text-cyan-300" />
                   Live Estimated Scope
                 </span>
-                <span className="text-[11px] font-semibold text-cyan-400 bg-cyan-950/80 border border-cyan-500/30 px-2.5 py-0.5 rounded-full">
+                <span className="text-[11px] font-semibold text-cyan-400 glass border border-cyan-500/30 px-2.5 py-0.5 rounded-full">
                   100% Upfront Guarantee
                 </span>
               </div>
@@ -251,7 +251,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({ onBookWithEstimate
               </div>
 
               {/* Dispatch ETA block */}
-              <div className="p-4 rounded-2xl bg-slate-950/70 border border-white/10 space-y-2.5">
+              <div className="p-4 rounded-2xl glass border border-white/10 space-y-2.5">
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-slate-400 flex items-center gap-1.5">
                     <Clock className="w-4 h-4 text-amber-400" />
@@ -307,7 +307,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({ onBookWithEstimate
 
               <a
                 href="tel:3343159926"
-                className="w-full py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm text-slate-200 bg-slate-950/80 hover:bg-slate-900 border border-white/15 flex items-center justify-center gap-2 transition-colors"
+                className="w-full py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm text-slate-200 glass hover:bg-white/10 border border-white/15 flex items-center justify-center gap-2 transition-colors"
                 id="estimator-call-btn"
               >
                 <Phone className="w-4 h-4 text-cyan-400" />

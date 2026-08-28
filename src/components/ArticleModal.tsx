@@ -18,14 +18,14 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-3xl rounded-3xl glass-header glow-cyan p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-3xl rounded-3xl glass glow-cyan p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto"
         role="dialog"
         aria-modal="true"
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer z-10"
+          className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-white glass transition-colors cursor-pointer z-10"
           aria-label="Close article"
         >
           <X className="w-5 h-5" />

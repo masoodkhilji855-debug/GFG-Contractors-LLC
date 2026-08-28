@@ -7,8 +7,8 @@ export const TrustMetrics: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         
         {/* Card 1: AL Licensed */}
-        <div className="glass p-5 rounded-2xl flex items-center gap-4 hover:border-cyan-500/30 transition-all duration-300">
-          <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-cyan-400 shrink-0">
+        <div className="glass-card p-5 rounded-2xl flex items-center gap-4">
+          <div className="w-12 h-12 glass rounded-xl flex items-center justify-center text-cyan-400 shrink-0">
             <ShieldCheck className="w-6 h-6" />
           </div>
           <div>
@@ -18,8 +18,8 @@ export const TrustMetrics: React.FC = () => {
         </div>
 
         {/* Card 2: Rapid Response */}
-        <div className="glass p-5 rounded-2xl flex items-center gap-4 hover:border-amber-500/30 transition-all duration-300">
-          <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-amber-400 shrink-0">
+        <div className="glass-card p-5 rounded-2xl flex items-center gap-4">
+          <div className="w-12 h-12 glass rounded-xl flex items-center justify-center text-amber-400 shrink-0">
             <Clock className="w-6 h-6" />
           </div>
           <div>
@@ -29,8 +29,8 @@ export const TrustMetrics: React.FC = () => {
         </div>
 
         {/* Card 3: Fair Pricing */}
-        <div className="glass p-5 rounded-2xl flex items-center gap-4 hover:border-cyan-500/30 transition-all duration-300">
-          <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-cyan-400 shrink-0">
+        <div className="glass-card p-5 rounded-2xl flex items-center gap-4">
+          <div className="w-12 h-12 glass rounded-xl flex items-center justify-center text-cyan-400 shrink-0">
             <CheckCircle2 className="w-6 h-6" />
           </div>
           <div>
@@ -42,7 +42,7 @@ export const TrustMetrics: React.FC = () => {
         {/* Card 4: Tap to Dispatch (Glow Cyan Highlight) */}
         <a 
           href="tel:3343159926"
-          className="glass p-5 rounded-2xl flex items-center gap-4 border-cyan-500/30 glow-cyan hover:scale-[1.02] active:scale-[0.99] transition-all duration-300 cursor-pointer group"
+          className="glass-card p-5 rounded-2xl flex items-center gap-4 border-cyan-500/30 glow-cyan hover:scale-[1.02] active:scale-[0.99] transition-all duration-300 cursor-pointer group"
         >
           <div className="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center text-slate-900 shrink-0 group-hover:bg-cyan-400 transition-colors">
             <Phone className="w-6 h-6 fill-slate-900" />
