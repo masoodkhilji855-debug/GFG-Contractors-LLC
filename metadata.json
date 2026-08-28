@@ -1,0 +1,6 @@
+{
+  "name": "G F G Contractor & Plumbing LLC",
+  "description": "Premier 24/7 plumbing and emergency repair contractor in Montgomery, Alabama with instant quote calculator and direct dispatch calling.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
